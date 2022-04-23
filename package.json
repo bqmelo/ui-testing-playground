@@ -1,0 +1,26 @@
+{
+  "name": "ui-testing-playground",
+  "version": "1.0.0",
+  "description": "The purpose of this project is to test the UI Test Automation Playground (http://www.uitestingplayground.com/) using Cypress.",
+  "main": "index.js",
+  "scripts": {
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "cy:spec": "cypress run --spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bqmelo/ui-testing-playground.git"
+  },
+  "author": "Bruna Melo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bqmelo/ui-testing-playground/issues"
+  },
+  "homepage": "https://github.com/bqmelo/ui-testing-playground#readme",
+  "devDependencies": {
+    "cypress": "^9.5.4",
+    "cypress-xpath": "^1.6.2",
+    "start-server-and-test": "^1.14.0"
+  }
+}
