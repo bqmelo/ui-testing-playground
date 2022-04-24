@@ -23,9 +23,9 @@ describe('dynamic id', () => {
             cy.url().should('contain', dynamicIdTexts.urlPath);
         });
 
-        afterEach(() => {
+        beforeEach(() => {
             cy.reload();
-          });
+        });
 
         it('should find and click on dinamic button by css', () => {
             cy.get(detailPageSelectors.cssButton).click();
