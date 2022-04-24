@@ -13,7 +13,9 @@ describe('load delay', () => {
             cy.url().should('contain', loadDelayTexts.urlPath);
             cy.get(detailPageSelectors.title).should('contain', loadDelayTexts.title);
             cy.get(detailPageSelectors.description).should('contain', loadDelayTexts.description);
-            cy.xpath(loadDelaySelectors.xPathButton).should('exist');
+            cy.xpath(loadDelaySelectors.xPathButton)
+              .should('exist')
+              .and('contain', loadDelayTexts.buttonText);
         });
     });
 });
