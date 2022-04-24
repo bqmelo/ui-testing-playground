@@ -1,7 +1,8 @@
-import { homeSelectors } from "../constants/selectors/home";
-import { homeTexts } from "../constants/texts/home";
-import { dynamicIdSelectors } from "../constants/selectors/dynamic_id";
-import { dynamicIdTexts } from "../constants/texts/dynamic_id";
+import { homeSelectors } from '../constants/selectors/home';
+import { detailPageSelectors } from '../constants/selectors/common';
+import { homeTexts } from '../constants/texts/home';
+import { dynamicIdSelectors } from '../constants/selectors/dynamic-id';
+import { dynamicIdTexts } from '../constants/texts/dynamic-id';
 
 describe('dynamic id', () => {
     context('check the texts in home and dynamic ID page', () => {
@@ -10,8 +11,8 @@ describe('dynamic id', () => {
             cy.xpath(homeSelectors.descriptionDynamicId).should('contain', homeTexts.descriptionDynamicId);
             cy.get(homeSelectors.linkDynamicId).click();
             cy.url().should('contain', dynamicIdTexts.urlPath);
-            cy.get(dynamicIdSelectors.title).should('contain', dynamicIdTexts.title);
-            cy.get(dynamicIdSelectors.description).should('contain', dynamicIdTexts.description);
+            cy.get(detailPageSelectors.title).should('contain', dynamicIdTexts.title);
+            cy.get(detailPageSelectors.description).should('contain', dynamicIdTexts.description);
         });
     });
 
@@ -27,15 +28,15 @@ describe('dynamic id', () => {
           });
 
         it('should find and click on dinamic button by css', () => {
-            cy.get(dynamicIdSelectors.cssButton).click();
+            cy.get(detailPageSelectors.cssButton).click();
             cy.reload();
-            cy.get(dynamicIdSelectors.cssButton).click();
+            cy.get(detailPageSelectors.cssButton).click();
         });
 
         it('should find and click on dinamic button by class', () => {
-            cy.get(dynamicIdSelectors.classButton).click();
+            cy.get(detailPageSelectors.classButton).click();
             cy.reload();
-            cy.get(dynamicIdSelectors.classButton).click();
+            cy.get(detailPageSelectors.classButton).click();
         });
 
         it('should find and click on dinamic button by xPath', () => {
@@ -51,7 +52,7 @@ describe('dynamic id', () => {
             cy.visit('/');
             cy.get(homeSelectors.linkDynamicId).click();
             cy.url().should('contain', dynamicIdTexts.urlPath);
-            cy.get(dynamicIdSelectors.cssButton)
+            cy.get(detailPageSelectors.cssButton)
               .invoke('attr', 'id')
               .then(($id) => {
                 cy.get(`#${$id}`)
@@ -63,4 +64,3 @@ describe('dynamic id', () => {
         });
     });
 });
-  
