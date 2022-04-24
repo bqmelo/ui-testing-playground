@@ -1,5 +1,14 @@
 {
     "baseUrl": "http://www.uitestingplayground.com/",
     "retries": { "runMode": 1, "openMode": 1 },
-    "video": false
+    "video": false,
+    "reporter": "mochawesome",
+    "reporterOptions": {
+        "charts": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports/mocha-reports"
+    },
+    "screenshotsFolder": "cypress/reports/assets"
 }
