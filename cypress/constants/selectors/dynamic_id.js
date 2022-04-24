@@ -1,7 +1,7 @@
 export const dynamicIdSelectors = {
-  initialLink: "a:contains(Dynamic ID)",
-  initialDescription: "//div[h3/a[.='Dynamic ID']]/p",
-  heading: ".container h3",
-  headingDescription: ".container p",
-  dynamicButton: ".container button"
+  title: '.container h3',
+  description: '.container p',
+  cssButton: '.container button',
+  classButton: '.btn.btn-primary',
+  xPathButton: '//button[.="Button with Dynamic ID"]'
 };

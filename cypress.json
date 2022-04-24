@@ -1,1 +1,5 @@
-{}
+{
+    "baseUrl": "http://www.uitestingplayground.com/",
+    "retries": { "runMode": 1, "openMode": 1 },
+    "video": false
+}
