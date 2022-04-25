@@ -5,4 +5,9 @@ workflows:
   build:
     jobs:
       - cypress/run:
-          executor: cypress/base-14
+          command: npx cy:run:report
+          post-steps:
+            - store_test_results:
+                path: cypress/reports
+            - store_artifacts:
+                path: report
