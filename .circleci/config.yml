@@ -10,4 +10,4 @@ workflows:
             - store_test_results:
                 path: cypress/reports/mocha-reports/mochawesome.json
             - store_artifacts:
-                path: report/report.html
+                path: report/
