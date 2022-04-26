@@ -4,7 +4,11 @@ orbs:
 workflows:
   build:
     jobs:
+      - cypress/install:
+          install-command: 'npm install'
       - cypress/run:
+          requires:
+            - cypress/install
           command: npm run cy:ci
           post-steps:
             - store_test_results:
