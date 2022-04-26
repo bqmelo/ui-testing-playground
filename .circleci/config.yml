@@ -9,7 +9,7 @@ workflows:
       - cypress/run:
           requires:
             - cypress/install
-          command: npm run cy:ci
+          command: npm run cy:ci --browser chrome
           post-steps:
             - store_test_results:
                 path: cypress/reports
