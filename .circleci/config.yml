@@ -5,11 +5,11 @@ workflows:
   build:
     jobs:
       - cypress/install:
-          install-command: 'npm install --dev'
+          install-command: 'npm install cypress-mochawesome-reporter junit-report-merger mocha-junit-reporter cypress-multi-reporters mocha'
       - cypress/run:
           requires:
             - cypress/install
-          command: npm run cy:ci --browser chrome
+          command: npm run cy:ci
           post-steps:
             - store_test_results:
                 path: cypress/reports
