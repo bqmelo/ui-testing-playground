@@ -2,13 +2,18 @@
     "baseUrl": "http://www.uitestingplayground.com/",
     "retries": { "runMode": 1, "openMode": 1 },
     "video": false,
-    "reporter": "mochawesome",
+    "reporter": "cypress-multi-reporters",
     "reporterOptions": {
-        "charts": true,
-        "overwrite": false,
-        "html": false,
-        "json": true,
-        "reportDir": "cypress/reports/mocha-reports"
+    "reporterEnabled": "cypress-mochawesome-reporter, mocha-junit-reporter",
+    "cypressMochawesomeReporterReporterOptions": {
+      "reportDir": "cypress/reports",
+      "charts": true,
+      "reportPageTitle": "UI Test Suite",
+      "embeddedScreenshots": true,
+      "inlineAssets": true
     },
-    "screenshotsFolder": "cypress/reports/assets"
+    "mochaJunitReporterReporterOptions": {
+      "mochaFile": "cypress/reports/junit/results-[hash].xml"
+    }
+  }
 }

@@ -7,12 +7,8 @@
     "cy:open": "cypress open",
     "cy:run": "cypress run",
     "cy:spec": "cypress run --spec",
-    "cy:run:ci": "node_modules/.bin/cypress run",
-    "cleanup:reports": "rm -R -f cypress/reports && rm -R -f report && mkdir report",
-    "combine-reports": "mochawesome-merge --reportDir cypress/reports/mocha-reports/*.json > report/report.json",
-    "generate-html": "marge report/*.json -f report -o report",
-    "cy:run:report": "npm run cleanup:reports && npm run cy:run && npm run combine-reports && npm run generate-html"
-  },
+    "cy:run:ci": "node_modules/.bin/cypress run"
+    },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bqmelo/ui-testing-playground.git"
