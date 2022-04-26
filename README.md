@@ -1,6 +1,30 @@
 # ui-testing-playground
 The purpose of the project is to test the UI Test Automation Playground (http://www.uitestingplayground.com/) using Cypress.
 
+Folder structure:
+
+```
+.circleci/
+    config.yml
+
+cypress/
+    constants/
+        selectors/
+        texts/
+    fixtures/
+    integration/
+    plugins/
+    support/
+
+node_modules/
+.gitignore
+cypress.json
+package-lock.json
+package.json
+README.md
+```
+
+
 # Getting started with Cypress
 Cypress is an end-to-end testing framework, JavaScript-based test automation tool for the modern web.
 
@@ -11,7 +35,17 @@ Cypress enables you to write all types of tests:
 
 Check the [Cypress Documentation](https://docs.cypress.io/guides/overview/why-cypress#What-you-ll-learn) out.
 
-## Project Prerequisites (to run local)
+## Continuous Integration with CircleCI
+Continuous integration improves team productivity, efficiency, confidence, and happiness. Find problems and solve them quickly. Release higher quality, more stable products.
+
+
+CircleCI is a cloud-based CI/CD tool that automates installation and delivery procedures. Since it is a cloud-based CI/CD tool, it eliminates the redundancy of a dedicated server and cuts down the cost of maintenance of a constant local server host. 
+
+See more about [CircleCi](https://circleci.com/docs/).
+
+
+
+## Project Prerequisites
 ### Operating System
 
 - **macOS** 10.9 and above (64-bit only)
@@ -33,8 +67,16 @@ apt-get install libgtk2.0-0 libgtk-3-0 libgbm-dev libnotify-dev libgconf-2-4 lib
 ```
 yum install -y xorg-x11-server-Xvfb gtk2-devel gtk3-devel libnotify-devel GConf2 nss libXScrnSaver alsa-lib
 ```
+### Installation
 
-## Running project
+
+```
+npm install
+```
+
+## Running project locally
+
+After install all the dependencies, you can use one of the commands below to start testing.
 
 | Command | Description |
 | :------- | :------- |

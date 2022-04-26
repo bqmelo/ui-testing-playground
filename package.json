@@ -7,11 +7,7 @@
     "cy:open": "cypress open",
     "cy:run": "cypress run",
     "cy:spec": "cypress run --spec",
-    "cy:run:ci": "node_modules/.bin/cypress run",
-    "cleanup:reports": "rm -R -f cypress/reports && rm -R -f report && mkdir report",
-    "combine-reports": "mochawesome-merge --reportDir cypress/reports/mocha-reports/*.json > report/report.json",
-    "generate-html": "marge report/*.json -f report -o report",
-    "cy:run:report": "npm run cleanup:reports && npm run cy:run && npm run combine-reports && npm run generate-html"
+    "cy:ci": "npm run cy:run"
   },
   "repository": {
     "type": "git",
@@ -25,8 +21,12 @@
   "homepage": "https://github.com/bqmelo/ui-testing-playground#readme",
   "devDependencies": {
     "cypress": "^9.5.4",
+    "cypress-mochawesome-reporter": "^3.0.1",
+    "cypress-multi-reporters": "^1.6.0",
     "cypress-xpath": "^1.6.2",
+    "junit-report-merger": "^3.0.5",
     "mocha": "^9.2.2",
+    "mocha-junit-reporter": "^2.0.2",
     "mochawesome": "^7.1.3",
     "mochawesome-merge": "^4.2.1",
     "mochawesome-report-generator": "^6.2.0",
