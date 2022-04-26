@@ -43,7 +43,9 @@ CircleCI is a cloud-based CI/CD tool that automates installation and delivery pr
 
 See more about [CircleCi](https://circleci.com/docs/).
 
+The project is integrated with CircleCI:
 
+- CircleCI Project: [ui-testing-playground](https://app.circleci.com/pipelines/github/bqmelo/ui-testing-playground?branch=main&filter=all)
 
 ## Project Prerequisites
 ### Operating System
