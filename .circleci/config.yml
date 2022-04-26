@@ -8,6 +8,6 @@ workflows:
           command: npm run cy:run
           post-steps:
             - store_test_results:
-                path: cypress/reports
+                path: cypress/reports/mocha-reports/mochawesome.json
             - store_artifacts:
-                path: cypress/reports
+                path: report/
