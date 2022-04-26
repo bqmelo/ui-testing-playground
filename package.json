@@ -7,7 +7,7 @@
     "cy:open": "cypress open",
     "cy:run": "cypress run",
     "cy:spec": "cypress run --spec",
-    "cy:ci": "npm run cy:run --headless --disable-gpu"
+    "cy:ci": "npm run cy:run"
   },
   "repository": {
     "type": "git",

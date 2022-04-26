@@ -43,7 +43,7 @@ describe('text input', () => {
                 const buttonName = `${value}`
 
                 cy.textInputChangeButtonName(buttonName);
-                cy.get(textIpuntSelectors.button).should('contain', textInputTexts.button)
+                cy.get(textIpuntSelectors.button).should('not.contain', textInputTexts.button)
             });
         });
     });
