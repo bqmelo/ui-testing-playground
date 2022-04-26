@@ -5,9 +5,9 @@ workflows:
   build:
     jobs:
       - cypress/run:
-          command: npm run cy:run:report
+          command: npm run cy:run
           post-steps:
             - store_test_results:
                 path: cypress/reports
             - store_artifacts:
-                path: report/report.html
+                path: cypress/reports
