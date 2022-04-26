@@ -14,8 +14,6 @@ cypress/
     fixtures/
     integration/
     plugins/
-    reports/
-    screenshots/
     support/
 
 node_modules/
