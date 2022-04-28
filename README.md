@@ -53,7 +53,7 @@ You can find the reports for each CI run by:
 
 - Acessing the build run you desire
 - In the `Test` tab you will find if something went wrong
-- In the `Artifacts` tab you will find the Cucumber reports
+- In the `Artifacts` tab you will find the Mochawesome and Mocha Junit reports
 
 
 ## Project Prerequisites
