@@ -47,6 +47,15 @@ The project is integrated with CircleCI:
 
 - CircleCI Project: [ui-testing-playground](https://app.circleci.com/pipelines/github/bqmelo/ui-testing-playground?branch=main&filter=all)
 
+#### Reports
+
+You can find the reports for each CI run by:
+
+- Acessing the build run you desire
+- In the `Test` tab you will find if something went wrong
+- In the `Artifacts` tab you will find the Cucumber reports
+
+
 ## Project Prerequisites
 ### Operating System
 
@@ -85,3 +94,10 @@ After install all the dependencies, you can use one of the commands below to sta
 | npm run cy:open | Opens the Cypress Test Runner. |
 | npm run cy:run | To run all the present tests in headless mode. |
 | npm run cy:run --spec | To run our specific spec file we use --spec option by passing the path and file name as arguments. |
+
+
+## Reports
+
+You can find the Report in the path: `cypress/reports/index.html`.
+
+The folder report and report are generated in every run.
