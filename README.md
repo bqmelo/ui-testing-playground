@@ -1,5 +1,5 @@
 # ui-testing-playground
-The purpose of the project is to test the UI Test Automation Playground (http://www.uitestingplayground.com/) using Cypress.
+The purpose of the project is to test the [UI Test Automation Playground](http://www.uitestingplayground.com/) using Cypress.
 
 Folder structure:
 
