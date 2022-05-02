@@ -24,6 +24,38 @@ package.json
 README.md
 ```
 
+### Project details
+
+- Language: Javascript
+- Package manager: npm
+- Test framework: Cypress
+- Reports: Mochawesome and Mocha Junit
+- CI platform: CircleCi
+
+#### Scenarios covered
+- Dynamic ID:
+  - It is important to practice how to select elements in other ways, so we will not have the dependency with ID.
+
+- Load Delay:
+  - We can see similar load delay on elements in the react applications, and Cypress handles that automatically, then we can be focussed in the test itself. 
+
+- Sample App:
+  - It demonstrates kind of a login page, which is the most important page in all the applications that require authentication.
+
+- Text Input:
+  - Depending on the text input, we need to run key validations like max length, characters accepted, etc. That will be important to keep the consistency. Even though for most applications these validations are done in the backend, there are a few applications in which the frontend is responsible for validating that.
+
+#### Reports
+
+- CI:
+  - In the `Test` tab you will find if something went wrong
+  - In the `Artifacts` tab you will find the reports
+
+
+- Local after run the project: `cypress/reports/index.html`
+
+The folder report and the report itself are generated in every run.
+
 
 # Getting started with Cypress
 Cypress is an end-to-end testing framework, JavaScript-based test automation tool for the modern web.
@@ -96,8 +128,7 @@ After install all the dependencies, you can use one of the commands below to sta
 | npm run cy:run --spec | To run our specific spec file we use --spec option by passing the path and file name as arguments. |
 
 
-## Reports
-
-You can find the Report in the path: `cypress/reports/index.html`.
-
-The folder report and report are generated in every run.
+# Next Steps
+1. Find a solution in CircleCi to use the `execute shell` to execute a .bash in the project, or execute the `Calliope POST request` directly in config.yml for sending the test results to the Calliope platform.
+2. Refine the reports and specs in code to get more clear results.
+3. Integrate project in another CI to get knowledge in other platforms.
